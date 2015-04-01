@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
 	private EditText _weightEditText;
 	private EditText _heightEditText;
 	private TextView _resultView;
+	private TextView _bodyType;
 	private RadioGroup _radioGroup;
 	private RadioButton _selectedButton;
 	private Button _calculate;
@@ -43,6 +44,7 @@ public class MainActivity extends Activity {
         this._weightEditText = (EditText) findViewById(R.id.weightText);
         this._heightEditText = (EditText) findViewById(R.id.heightText);
         this._resultView = (TextView) findViewById(R.id.resultLabel);
+        this._bodyType = (TextView) findViewById(R.id.bodyType);
         this._calculate = (Button) findViewById(R.id.calculateButton); 
         this._radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         
@@ -69,7 +71,9 @@ public class MainActivity extends Activity {
       String check = bmiCheck(bmiValue);
  
       //  set the value in the result text
-      _resultView.setText(bmiValue + "-" + check);
+      _resultView.setText("Bmi" + bmiValue  );
+      
+      _bodyType.setText("Body Type - " + check);
       
      }
     }

@@ -11,5 +11,6 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
     <string name="bodyType"></string>
+    <string name="WeightLabel">Your Weight</string>
 
 </resources>
