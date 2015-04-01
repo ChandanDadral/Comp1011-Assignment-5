@@ -10,5 +10,6 @@
     <string name="resultLabel1">Resultssssssss</string>
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
+    <string name="bodyType"></string>
 
 </resources>

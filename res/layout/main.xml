@@ -48,15 +48,6 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/heightText"
-        android:layout_below="@+id/heightText"
-        android:onClick="calculateClickHandler"
-        android:text="Calculate BMI" />
-
     <TextView
         android:id="@+id/resultLabel"
         android:layout_width="wrap_content"
@@ -85,7 +76,6 @@
             android:layout_weight="1"
             android:gravity="center"
             android:paddingRight="5dp"
-            android:checked="true"
             android:text="Imperial" />
 
         <RadioButton
@@ -97,5 +87,26 @@
             android:paddingRight="5dp"
             android:text="Metric" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignLeft="@+id/heightText"
+        android:layout_marginBottom="13dp"
+        android:onClick="calculateClickHandler"
+        android:text="Calculate BMI" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/resultLabel"
+        android:layout_marginBottom="66dp"
+        android:text="@string/bodyType"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
