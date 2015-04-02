@@ -1,3 +1,9 @@
+<!--  
+ * @author chandan Dadral
+ * @Version: 1.0 April 01, 2015
+ * @Description: This Application was desined to give the value of BMI. User can Select Imperial and
+ *					Metric Units and it gives the Value of BMI 
+ -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -55,7 +61,7 @@
         android:layout_alignLeft="@+id/calculateButton"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/heightText"
-        android:layout_marginBottom="123dp"
+        android:layout_marginBottom="175dp"
         android:layout_marginLeft="21dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -106,8 +112,19 @@
         android:layout_alignLeft="@+id/resultLabel"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/resultLabel"
-        android:layout_marginBottom="66dp"
+        android:layout_marginBottom="120dp"
         android:text="@string/bodyType"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/calculateButton"
+        android:layout_alignBottom="@+id/calculateButton"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/calculateButton"
+        android:onClick="resetClickHandler"
+        android:text="@string/resetButton" />
 
 </RelativeLayout>

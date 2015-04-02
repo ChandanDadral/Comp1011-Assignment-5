@@ -34,6 +34,8 @@ public class MainActivity extends Activity {
 	private RadioGroup _radioGroup;
 	private RadioButton _selectedButton;
 	private Button _calculate;
+	private Button _reset;
+	
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends Activity {
         this._resultView = (TextView) findViewById(R.id.resultLabel);
         this._bodyType = (TextView) findViewById(R.id.bodyType);
         this._calculate = (Button) findViewById(R.id.calculateButton); 
+        this._reset = (Button) findViewById(R.id.resetButton); 
         this._radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         
     }
@@ -57,9 +60,9 @@ public class MainActivity extends Activity {
 	    this._select = (String) this._selectedButton.getText();
 	    
     //to handle the Calculate Button
+	    
      if (view.getId() == R.id.calculateButton) {
-    	
- 
+    	 
      //Getting the User Inputs 
        this._weight = Float.parseFloat(_weightEditText.getText().toString());
        this._height = Float.parseFloat(_heightEditText.getText().toString());
@@ -71,13 +74,27 @@ public class MainActivity extends Activity {
       String check = bmiCheck(bmiValue);
  
       //  set the value in the result text
-      _resultView.setText("Bmi" + bmiValue  );
+      _resultView.setText("Bmi " + bmiValue  );
       
+      //Set the Text to the Body Type
       _bodyType.setText("Body Type - " + check);
       
      }
     }
+    
+    /**
+     * Click handler on the Reset Button
+     * @param view
+     */
+    public void resetClickHandler(View view) {
 
+    	 _resultView.setText(" " );
+    	 _bodyType.setText(" ");
+    	 _weightEditText.setText(" ");
+    	 _heightEditText.setText(" ");
+    	 
+    	
+    }
     /**
      * This Functions calculates the User BMI 
      * @param weight - weight of the user
