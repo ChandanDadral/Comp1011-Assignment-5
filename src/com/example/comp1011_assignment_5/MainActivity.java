@@ -70,11 +70,14 @@ public class MainActivity extends Activity {
       // calculate the bmi value
       float bmiValue = calculateBMI(this._weight, this._height);
  
+      //Rounding Off the BMi Value
+      String bmiRound= String.format("%.2f", bmiValue);
+      
       // interpret the meaning of the bmi value
       String check = bmiCheck(bmiValue);
  
       //  set the value in the result text
-      _resultView.setText("Bmi " + bmiValue  );
+      _resultView.setText("Bmi " + bmiRound  );
       
       //Set the Text to the Body Type
       _bodyType.setText("Body Type - " + check);
@@ -112,7 +115,9 @@ public class MainActivity extends Activity {
     		
     		this._bmi = (this._weight / (this._height * this._height));
     	}
-    	return this._bmi;
+    	
+    	//return String.format("%.2f", this._bmi);
+    return this._bmi;
     	
 }
 

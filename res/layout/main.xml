@@ -30,6 +30,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:ems="10"
+        android:hint="Enter your Weight"
         android:inputType="numberDecimal" />
 
     <TextView
@@ -49,6 +50,7 @@
         android:layout_below="@+id/textView2"
         android:layout_marginTop="18dp"
         android:ems="10"
+        android:hint="Enter your Height"
         android:inputType="numberDecimal" >
 
         <requestFocus />
@@ -65,6 +67,7 @@
         android:layout_marginLeft="21dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="fill_parent"
